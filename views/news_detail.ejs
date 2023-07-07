@@ -1,0 +1,27 @@
+<%- include('header',{title:"SBXG",cssFiles:["main.css"]}) %>
+    <div class="cont1">
+        <div class="titleWrap">
+            <h2 class="title"><%- newsResult.title %></h2>
+            <div class="linkWrap">
+                <!-- <% if(login) { %>
+                    <% if(login.userNo === 0){ %>
+                        <a href="/store/update/<%- newsResult.num %>">수정</a>
+                        <a href="/dbdelete/<%- newsResult.num %>">삭제</a>
+                    <% } %>
+                <% } %> -->
+                <a href="/news">Back</a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="prdImg">
+                <img src="/upload2/<%- newsResult.attachfile[0] %>">
+                <img src="/upload2/<%- newsResult.attachfile[0] %>">
+            </div>
+            <div class="detail">
+                <h3 class="subTitle"><%- newsResult.title %></h3>
+                <p class="newsDetail"><%- newsResult.newsDetail %></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

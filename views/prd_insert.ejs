@@ -1,0 +1,68 @@
+<%- include('header',{title:"SBXG",cssFiles:["header.css"]}) %>
+    <!-- 파일첨부 1개만 시킬 때 -->
+    <video src="/img/bg_video.mp4" autoplay loop muted></video>
+    <div class="formWrap">
+        <form id="upload" action="/dbupload" method="post" enctype="multipart/form-data">
+            <h2>상품등록</h2>
+            <div class="inputWrap">
+                <label for="title">상품명</label>
+                <input type="text" name="title" id="title" required>
+            </div>
+            <div class="inputWrap">
+                <label for="price">상품 가격</label>
+                <input type="text" name="price" id="price" required>
+            </div>
+            <!-- 파일첨부 -->
+            <div class="inputWrap">
+                <label for="file">파일첨부</label>
+                <input type="file" name="thumbnail" multiple>
+            </div>
+            <button id="submit" type="submit">상품 등록완료</button>
+        </form>
+    </div>
+
+    <script>
+        // 첨부한 파일의 확장자 체크가능
+        const upload = document.querySelector("#upload"); //데이터 전송역할
+        const inputFile = document.querySelector("#file"); // 첨부파일 input태그
+        const submitBtn = document.querySelector("#submit");// 전송 버튼
+        const extCheck = ['.jpg','.png','.jpeg','gif']; // 업로드시 체크할 확장자명들
+
+        // 첨부파일이 3개라고 가정했을 때 하나라도 이미지 파일이 아니면 업로드 불가
+        let validRequest = false; // true일 때 데이터 전송 처리할 역학
+        let validCount = 0; //체크 시 이미지파일에 맞는 경우면 카운트 1 씩 증가
+
+                                        //이벤트 객체
+        submitBtn.addEventListener('click',(e)=>{
+            // 반복문으로 첨부파일 갯수만큼 돌려주기
+            for(let i=0; i<inputFile/files.length; i++){
+                let fileName = inputFile.files[i].name; // 파일명 갖고오기
+                let fileLen = fileName.length; //해당 파일명 글자 수
+                let fileDots = fileName.lastIndexOf(".");//.jpg에서 .기호 시작위치 번호값
+                let fileExt = fileName.substring(fileDots,fileLen);//확장명 글자 추출
+                let fileChange = fileExt.toLowerCase(fileDot,fileLen) // 대문자에서 소문자로 변경
+                result = extCheck.includes(fileChange)//해당 확장자명이 위 배열안에 있는지 체크
+
+                // 체크결과가 true값이면 카운트가 1증가
+                // false 카운트 증가없음
+                if(result){
+                    validCount++; //참이면 1증가
+                    if(validCount === inputFile.files.length){
+                        validRequest = true;
+                    }
+                }
+            }
+            //validRequest 값이 true면 데이터를 전송 false 값이면 전송불가
+            if(validRequest){
+                upload.submit();
+                
+            }
+            else{
+                validCount = 0; //카운트 숫자 초기화
+                alert("이미지 파일들만 올릴수 있습니다")
+                e.preventDefault();
+            }
+        })
+    </script>
+</body>
+</html>

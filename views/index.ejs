@@ -1,0 +1,544 @@
+<%- include('header.ejs',{title:"SBXG",cssFiles:["main.css"]}) %>
+    <div class="container">
+        <div class="cont1">
+            <div class="contentWrap">
+                <video playsinline autoplay muted loop class="intro_vid">
+                    <source src="/img/intro_vid.mp4">
+                </video>
+                <img src="/img/intro_bg.png">
+                <div class="intro intro1">
+                    <div class="introTxt">
+                        <span class="text">CREATE</span>
+                    </div>
+                    <div class="polygonWrap">
+                        <div class="polygonBox">
+                            <div class="polygon"></div>
+                        </div>
+                    </div>
+                    <div class="introTxt">
+                        <span class="text">OUR</span>
+                    </div>
+                </div>
+                <div class="intro intro2">
+                    <div class="introTxt">
+                        <span class="text">OWN</span>
+                    </div>
+                    <div class="polygonWrap">
+                        <div class="polygonBox">
+                            <div class="polygon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro intro3">
+                    <div class="polygonWrap">
+                        <div class="polygonBox">
+                            <div class="polygon"></div>
+                        </div>
+                    </div>
+                    <div class="introTxt">
+                        <span class="text">GAME</span>
+                    </div>
+                    <div class="introTxt2">
+                        <span class="text">Esports와 게임이 문화가 될 수 있을까? 모두가 우려하는 그 질문에 SBXG는 우리만의 방식으로 게이밍 문화를 뒤집을 것입니다. 그것도 모두가 좋아하고 선망하는 문화가 되도록 말이죠.</span>
+                    </div>
+                </div>
+                <div class="world_rotate">
+                    <img src="/img/btn_world.png">
+                </div>
+            </div>
+            
+        </div>
+        <div class="cont2">
+            <div class="blindBgWrap">
+                <div class="blindBg"></div>
+                <div class="blindBg"></div>
+                <div class="blindBg"></div>
+                <div class="blindBg"></div>
+                <div class="blindBg"></div>
+                <div class="blindBg"></div>
+            </div>
+            <!-- <div class="txtWrap">
+                <div class="bigFont bigFont1">W</div>
+                <div class="bigFont bigFont2">E</div>
+                <div class="bigFont bigFont3">A</div>
+                <div class="bigFont bigFont4">R</div>
+                <div class="bigFont bigFont5">E</div>
+                <div class="bigFont bigFont6">S</div>
+                <div class="bigFont bigFont7">B</div>
+                <div class="bigFont bigFont8">X</div>
+                <div class="bigFont bigFont9">G</div>
+            </div> -->
+            <div class="subTxt">
+                <h2 class="title">
+                    <span>WE ARE SBXG</span>
+                </h2>
+                <div class="context">
+                    <p><span>SBXG</span>는 국내 최대 MCN인 <span>샌드박스 네트워크</span>의 자회사로 2020년에 설립되었습니다. <br> 세계적인 Esports Team이자 Brand가 되겠다는 비전 아래, 창의적 컨텐츠, 패션과 머챈다이즈, Crypto 비즈니스 등 <br> 독보적인 액션들로 우리는 <span>Esports를 넘어 게이밍 문화까지 바꿀 것</span>입니다.</p>
+                </div>
+                <div class="more">
+                    <a href="#">VIEW MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="flowBrand flowBrand1">
+            <div class="brands brands1">
+                <% const img = ['icon1','icon2','icon3','icon4','icon5','icon6','icon7','icon8','icon9','icon10','icon11','icon12','icon13','icon14'] %>
+                <% for(let i=0; i<img.length; i++){ %>
+                    <img src="/img/icon/<%-img[i]%>.png">
+                <% } %>
+            </div>
+        </div>
+        <div class="cont3">
+            <div class="titleWrap">
+                <h2 class="title">
+                    ESPORTS TEAMS
+                </h2>
+                <a href="#">VIEW MORE</a>
+            </div>
+            <ul class="tabMenu">
+                <li>RAINBOW6 SIEGE</li>
+                <li>KARTRIDER</li>
+                <li>LSB YOUTH</li>
+                <li>LCK : LIIV SANDBOX</li>
+            </ul>
+            <div class="views">
+                <div class="view">
+                    <div class="textWrap">
+                        <h2>RAINBOW6 SIEGE</h2>
+                        <p>창단 시즌 세계 8강에 오른 <br>세계 최고의 레인보우식스 시즈팀</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <div class="textWrap">
+                        <h2>KARTRIDER</h2>
+                        <p>국내 최장수 Esports 종목의 <br>리그 최다 우승 팀</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <div class="textWrap">
+                        <h2>LSB YOUTH</h2>
+                        <p>LCK 리브 샌드박스 2군 팀</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <div class="textWrap">
+                        <h2>LCK : LIIV SANDBOX</h2>
+                        <p>세계 최고의 LOL 프로리그<br>LCK의 프렌차이즈 팀, 리브 샌드박스</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont4">
+            <div class="center">
+                <h2 class="title">OUR BUSINESS</h2>
+                <% const listData = [{
+                    title:'PORTAL',
+                    text:`SBXG가 운영하는 프리미엄 PC방이자 </br> 다양한 Esports 행사가 펼쳐지는 신논현역 복합문화공간`,
+                    img1:'/img/brand/brand1-1.png',
+                    img2:'/img/brand/brand1-2.png'
+                },{
+                    title:'META TOY GAMERS GUILD',
+                    text:'Web3.0 게임 생태계를 성장시킬 </br>메타토이즈 NFT 커뮤니티',
+                    img1:'/img/brand/brand2-1.png',
+                    img2:'/img/brand/brand2-2.png'
+                },{
+                    title:'CLUB HOUSE',
+                    text:'전세계의 게임 팬들이 자유롭게 방문하고</br>SBXG의 브랜드와 IP를 완벽하게 체험할 수 있는 공간',
+                    img1:'/img/brand/brand3-1.png',
+                    img2:'/img/brand/brand3-2.png'
+                },{
+                    title:'STUDIO',
+                    text:'SBXG Studio는 파트너들의 브랜드 가치를</br>높여줄 영상과 이벤트를 제작 및 운영',
+                    img1:'/img/brand/brand4-1.png',
+                    img2:'/img/brand/brand4-2.png'
+                }]%>
+                <% for(let i=0; i<listData.length; i++){%>
+                    <div class="lists">
+                        <div class="textWrap">
+                            <h2 class="title"><%- listData[i].title %></h2>
+                            <p class="text"><%- listData[i].text %></p>
+                        </div>
+                        <img src="<%- listData[i].img1 %>">
+                        <img class="img2" src="<%- listData[i].img2 %>">
+                    </div>
+                <%}%>
+            </div>
+        </div>
+        <div class="cont5">
+            <div class="center">
+                <div class="titleWrap">
+                    <h2 class="title">
+                        YOUTUBE
+                    </h2>
+                    <a href="#">VIEW MORE</a>
+                </div>
+                <div class="slideWrap">
+                    <div class="swiper mySwiper swiper1">
+                        <div class="swiper-wrapper bigSlide">
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">Liiv SANDBOX Brand Film | CKNP</p>
+                                    <div class="playBtn">
+                                        PLAY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">NEW KID on the LSB | 리브 샌드박스 2023 서머 스플릿 업데이트</p>
+                                    <div class="playBtn">
+                                        PLAY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">리브 샌드박스 2023 로스터 인터뷰</p>
+                                    <div class="playBtn">
+                                        PLAY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">여성 챌린저에서 프로게이머로, 순당무의 새로운 도전 | New Challenger</p>
+                                    <div class="playBtn">
+                                        PLAY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">리브 샌드박스 2023 업데이트 | 리툴링&프로세스</p>
+                                    <div class="playBtn">
+                                        PLAY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">2022 카트라이더 시즌2 양대 우승 과정 | 'Our time is now'</p>
+                                    <div class="playBtn">
+                                        PLAY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">챌린저스 가족 여러분... 안녕하살법!</p>
+                                    <div class="playBtn">
+                                        PLAY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">LSB 2022 Summer Kit Behind The Scenes | 리브 샌드박스</p>
+                                    <div class="playBtn">
+                                        PLAY
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper mySwiper swiper2">
+                        <div class="swiper-wrapper smallSlide">
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">NEW KID on the LSB | 리브 샌드박스 2023 서머 스플릿 업데이트</p>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">리브 샌드박스 2023 로스터 인터뷰</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">여성 챌린저에서 프로게이머로, 순당무의 새로운 도전 | New Challenger</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">리브 샌드박스 2023 업데이트 | 리툴링&프로세스</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">2022 카트라이더 시즌2 양대 우승 과정 | 'Our time is now'</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">챌린저스 가족 여러분... 안녕하살법!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">LSB 2022 Summer Kit Behind The Scenes | 리브 샌드박스</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slidebg">
+                                    <p class="txt">Liiv SANDBOX Brand Film | CKNP</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"><i class="fa-solid fa-angle-right"></i></div>
+                        <div class="swiper-button-prev"><i class="fa-solid fa-angle-left"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flowBrand flowBrand2">
+            <div class="brands brands2">
+                <% const img2 = ['icon2_1','icon2_2','icon2_3','icon2_4','icon2_5'] %>
+                <% const text = ['LET’S PARTY AND PLAY!','CREATE OUR OWN GAME','SPREAD POSITIVE BUFF','FAN IS THE FINAL STAGE','HIGH PASSION IS OUR HP'] %>
+                <% for(let i=0; i<img2.length; i++){ %>
+                    <img src="img/icon/<%-img2[i]%>.png">
+                    <span><%-text[i]%></span>
+                <% } %>
+            </div>
+        </div>
+        <div class="cont6">
+            <div class="center">
+                <div class="titleWrap">
+                    <h2 class="title">
+                        SHOP
+                    </h2>
+                    <a href="#">SHOP ALL</a>
+                </div>
+                <div class="shopList">
+                    <% for (let i = 0; i < 8; i++) {
+                        const item = productResult[i];
+                    %>
+                        <a  href="/shop/detail/<%- item.num %>" class="showBox">
+                            <div class="imgWrap">
+                                <img src="/upload/<%- item.attachfile[0] %>">
+                                <img src="/upload/<%- item.attachfile[1] %>">
+                            </div>
+                            <div class="textWrap">
+                                <h3><%- item.title %></h3>
+                                <div>
+                                    <p><%- item.price %></p>
+                                </div>
+                            </div>
+                        </a>
+                    <%}%>
+                </div>
+            </div>    
+        </div>
+        <div class="cont7">
+            <div class="center">
+                <div class="titleWrap">
+                    <h2 class="title">
+                        WORK&PRESS
+                    </h2>
+                    <a href="#">VIEW MORE</a>
+                </div>
+                <ul class="newsList">
+                    <% for(let i = 0; i < 4; i++){
+                        const item2 = newsResult[i]; %>
+                        <li class="news">
+                            <a class="link" href="/news/detail/<%-item2.num %>">
+                                <img src="/upload2/<%-item2.attachfile[0] %>">
+                                <h2 class="title"><%-item2.title %></h2>
+                            </a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%- include('footer') %>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+       
+        
+        // cont1 배경 효과
+        const polygon = document.querySelectorAll(".intro .polygon");
+        const text = document.querySelectorAll(".intro .text");
+        // cont1 지구본
+        const world = document.querySelector(".world_rotate");
+        window.onload =()=>{
+            for(let i=0; i<polygon.length; i++){
+                polygon[i].style.transform = "translateY(100%)"
+            }
+            setTimeout(()=>{
+                for(let i=0; i<text.length; i++){
+                    text[i].style.transform = "translateY(-0%)"
+                }
+
+            },500)
+            setTimeout(()=>{
+                world.style.opacity = 1;
+
+            },1000)
+            
+        }
+
+        
+        const cont1 = document.querySelector(".cont1");
+        const cont2 = document.querySelector(".cont2");
+        const cont4 = document.querySelector(".cont4");
+        const cont5 = document.querySelector(".cont5");
+        const listTitle = document.querySelectorAll(".textWrap .title")
+        const flowBrand = document.querySelector(".flowBrand");
+        const blindWrap = document.querySelector(".blindBgWrap");
+        const blindBg = document.querySelectorAll(".blindBg");
+        const txtWrap = document.querySelector(".txtWrap");
+        const subTitle = document.querySelector(".subTxt .title > span");
+        const subContext = document.querySelector(".subTxt .context > p");
+        const subMore = document.querySelector(".subTxt .more > a");
+        window.addEventListener("wheel",()=>{
+            scTop = window.scrollY;
+          
+            // window.scrollTo({
+            //     top: cont2[scTop].offsetTop,
+            //     behavior: 'smooth'
+            // });
+            console.log(scTop);
+            // if(scTop < 300){
+            //     txtWrap.style.position = 'static'
+            // }
+            if(scTop >= 300){
+                for(let i=0; i< blindBg.length; i++){
+                    blindBg[i].style.transform = `scale(1,1)`
+                    
+                }
+                hamColorB();
+                setTimeout(()=>{
+                    blindWrap.style.top = '-200%'
+                    // txtWrap.style.position = 'fixed'
+                    
+                    // cont2.style.paddingBottom = 5000 + 'px'
+                    setTimeout(()=>{
+                        subTitle.style.transform = "translateY(0%)"
+                        subTitle.style.opacity = 1;
+                        subContext.style.transform = "translateY(0%)"
+                        subContext.style.opacity = 1;
+                        setTimeout(()=>{
+                            subMore.style.opacity = 1;
+                        },500)   
+                    },1000)
+
+                },1000)
+                
+                
+            }
+            if(scTop > flowBrand.offsetTop){
+                hamColorWh()
+            }
+            if(scTop > cont4.offsetTop - 300){
+                for(let i=0; i<listTitle.length; i++){
+                    listTitle[i].style.transform = 'translateY(0%)'
+                    listTitle[i].style.height = '36px'
+                }
+                hamColorB()
+            }
+        });
+        // 햄버거메뉴 흰색 함수
+        function hamColorWh(){
+            for(let i=0; i< hamBtnSpan.length; i++){
+                    hamBtnSpan[i].style.backgroundColor = '#fff'
+                }
+                hamBtn.style.color = '#fff'
+        };
+        // 햄버거메뉴 검은색 함수
+        function hamColorB(){
+            for(let i=0; i< hamBtnSpan.length; i++){
+                    hamBtnSpan[i].style.backgroundColor = '#000'
+                }
+                hamBtn.style.color = '#000'
+        };
+
+        //롤링 배너 복제본 생성
+        let roller = document.querySelector('.brands1');
+        roller.id = 'roller1';
+
+        let clone = roller.cloneNode(true);
+        clone.id = 'roller2';
+        document.querySelector('.flowBrand1').appendChild(clone); //부착
+
+        //원본, 복제본 배너 위치 지정
+        document.querySelector('#roller1').style.left = '0px';
+        
+        document.querySelector('#roller2').style.left = document.querySelector('.brands > img').offsetWidth+'px';
+
+        //클래스 할당
+        roller.classList.add('original');
+        clone.classList.add('clone');
+
+        //롤링 배너 복제본 생성
+        let roller2 = document.querySelector('.brands2');
+        roller2.id = 'roller3';
+
+        let clone2 = roller2.cloneNode(true);
+        clone2.id = 'roller4';
+        document.querySelector('.flowBrand2').appendChild(clone2); //부착
+
+        //원본, 복제본 배너 위치 지정
+        document.querySelector('#roller3').style.left = '0px';
+        
+        document.querySelector('#roller4').style.left = document.querySelector('.brands2 > img').offsetWidth+'px';
+
+        //클래스 할당
+        roller2.classList.add('original');
+        clone2.classList.add('clone');
+        
+        // cont3 탭메뉴
+        const tabMenu = document.querySelectorAll(".tabMenu > li");
+        const views = document.querySelectorAll(".view");
+        
+        for(let i=0; i<tabMenu.length; i++){
+            
+            tabMenu[i].addEventListener("click",()=>{
+                
+                for(let j=0; j<tabMenu.length; j++){
+                    views[j].style.opacity = 0;
+                    views[j].style.zIndex = 1;
+                    tabMenu[j].style.backgroundColor = "#151515"
+                    tabMenu[j].style.color = "#fff"
+                }
+                views[i].style.zIndex = 2;
+                views[i].style.opacity = 1;
+                tabMenu[i].style.backgroundColor = "#ffc600"
+                tabMenu[i].style.color = "#000"
+            })
+
+        }
+        // cont5 슬라이드 swiper api
+        const swiper1 = new Swiper('.swiper1', {
+        // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            speed:1000,
+
+            // If we need pagination
+            pagination: {
+            },
+
+            // Navigation arrows
+        });
+        const swiper2 = new Swiper('.swiper2', {
+        // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            speed:1000,
+            // If we need pagination
+            pagination: {
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+	        slideToClickedSlide: true,
+        });
+        swiper1.controller.control = swiper2;
+        swiper2.controller.control = swiper1;
+    </script>
+</body>
+</html>

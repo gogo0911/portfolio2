@@ -1,0 +1,103 @@
+<%- include('header',{title:"SBXG",cssFiles:["prd_detail.css"]}) %>
+    <div class="cont1">
+        <div class="center">
+            <div class="prdImgWrap">
+                <div class="bigImg">
+                    <img src="/upload/<%- productResult.attachfile[0] %>">
+                    <img src="/upload/<%- productResult.attachfile[1] %>">
+                </div>
+                <div class="smallImg">
+                    <img src="/upload/<%- productResult.attachfile[0] %>">
+                    <img src="/upload/<%- productResult.attachfile[1] %>">
+                </div>
+            </div>
+            <div class="prdDetail">
+                <h2 class="title"><%- productResult.title %></h2>
+                <p class="price"><%- productResult.price %></p>
+                <div class="deli">
+                    <h4>배송비</h4>
+                    <p>3,000원 <br>제주 3,500원, 제주 외 도서 산간 4,000원 추가</p>
+                </div>
+                <div class="sizesel">
+                    <p>SIZE</p>
+                    <select name="size" id="size">
+                        <option value="sel">선택하세요</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="2XL">2XL</option>
+                    </select>
+                </div>
+                <div class="prdCountWrap">
+                    <p>주문수량</p>
+                    <div class="prdCount">
+                        <button class="minus">-</button>
+                        <span class="count">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <div class="totalPrice">
+                    <p>총 상품 금액</p>
+                    <p class="total"><%- productResult.price %></p>
+                </div>
+                <a class="buy" href="#">구매하기</a>
+            </div>
+        </div>
+    </div>
+    <%- include('footer') %>
+    <script>
+        let dataFromServer = <%- JSON.stringify(productResult) %>
+        console.log(dataFromServer.price);
+        let slicePrice = parseInt(dataFromServer.price.replace(/,/g,""));
+        console.log(slicePrice);
+        // 구매가능한 최대 수량은 10개 , 최소 수량은 1개
+        const plus = document.querySelector(".plus");
+        const minus = document.querySelector(".minus");        
+        const count = document.querySelector(".count");        
+        const total = document.querySelector(".total");
+        const buy = document.querySelector(".buy");
+
+        buy.addEventListener('click',()=>{
+            // if(dataFromServer2){
+                alert('구매완료')
+            // }
+            // else{
+            //     alert('로그인 후 구매가능합니다')
+            //     location.href = '/login'
+            // }
+        })
+
+        let countNumber = 1;
+        let totalprice = slicePrice * countNumber;
+
+        // 증가버튼 클릭시 1씩 증가 / count쪽에 숫자값 출력 / 총상품 금액 출력
+        plus.onclick = function(){
+            
+            if(countNumber === 10) {
+                count.innerText = 10;
+                alert("최대 구매 가능한 수량은 10개 입니다.");
+            }
+            else {
+                countNumber = countNumber + 1;
+                count.innerText = countNumber;
+                totalprice = slicePrice * countNumber;
+                total.innerText = totalprice.toLocaleString('en-US') + '원';
+            }
+            }
+        minus.onclick = function(){
+        
+            if(countNumber === 1) {
+                count.innerText = 1;
+                alert("최소 구매 수량은 1개 입니다.");
+            }
+            else {
+                countNumber = countNumber - 1;
+                count.innerText = countNumber;
+                totalprice = slicePrice * countNumber;
+                total.innerText = totalprice.toLocaleString('en-US') + '원';
+            }
+        }   
+    </script>
+</body>
+</html>

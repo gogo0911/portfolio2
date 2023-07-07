@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBXG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <% if(cssFiles.length !== 0) { %>
+        <% for(let i=0; i<cssFiles.length; i++) { %>
+            <link rel="stylesheet" href="/css/<%- cssFiles[i] %>">
+        <% } %>
+    <% } %>
+    <script defer src="/js/header.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="center">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="/img/logo.png">
+                </a>
+            </h1>
+            <div class="menuBtn">
+                <span>MENU</span>
+                <div class="hammenu">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="gnbBg">
+                <ul class="gnb">
+                    <li><a href="#">WE ARE SBXG</a></li>
+                    <li><a href="#">ESPORTS TEAMS</a></li>
+                    <li><a href="#">OUR BUSINESS</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">MEDIA</a></li>
+                    <li><a href="#">WORK&PRESS</a></li>
+                    <li><a href="#">OUR PARTNERS</a></li>
+                </ul>
+                <div class="flowTxt">
+                    <span>LET’S PARTY AND PLAY</span>
+                    <span>LET’S PARTY AND PLAY</span>
+                </div>
+            </div>
+        </div>
+    </div>
