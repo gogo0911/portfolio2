@@ -4,11 +4,11 @@
             <div class="prdImgWrap">
                 <div class="bigImg">
                     <img src="/upload/<%- productResult.attachfile[0] %>">
-                    <img src="/upload/<%- productResult.attachfile[1] %>">
+                    <img src="/upload/<%- productResult.attachfile[2] %>">
                 </div>
                 <div class="smallImg">
                     <img src="/upload/<%- productResult.attachfile[0] %>">
-                    <img src="/upload/<%- productResult.attachfile[1] %>">
+                    <img src="/upload/<%- productResult.attachfile[2] %>">
                 </div>
             </div>
             <div class="prdDetail">
@@ -59,7 +59,7 @@
         const buy = document.querySelector(".buy");
 
         buy.addEventListener('click',()=>{
-            // if(dataFromServer2){
+            // if(document.querySelector("#size > option").value(sel)){
                 alert('구매완료')
             // }
             // else{
