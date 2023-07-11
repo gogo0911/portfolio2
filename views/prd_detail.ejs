@@ -32,9 +32,9 @@
                 <div class="prdCountWrap">
                     <p>주문수량</p>
                     <div class="prdCount">
-                        <button class="minus">-</button>
+                        <button class="minus"><i class="fa-solid fa-minus"></i></button>
                         <span class="count">1</span>
-                        <button class="plus">+</button>
+                        <button class="plus"><i class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="totalPrice">
@@ -48,9 +48,7 @@
     <%- include('footer') %>
     <script>
         let dataFromServer = <%- JSON.stringify(productResult) %>
-        console.log(dataFromServer.price);
         let slicePrice = parseInt(dataFromServer.price.replace(/,/g,""));
-        console.log(slicePrice);
         // 구매가능한 최대 수량은 10개 , 최소 수량은 1개
         const plus = document.querySelector(".plus");
         const minus = document.querySelector(".minus");        
@@ -97,7 +95,20 @@
                 totalprice = slicePrice * countNumber;
                 total.innerText = totalprice.toLocaleString('en-US') + '원';
             }
-        }   
+        }
+        // 상품 사진 이미지 상수
+        const bigImg = document.querySelectorAll(".bigImg >img");
+        const smallImg = document.querySelectorAll(".smallImg >Img");
+        
+        // 상품사진 클릭이벤트
+        for(let i=0; i<smallImg.length; i++){
+            smallImg[i].addEventListener('click',()=>{
+                for(let j=0; j<smallImg.length; j++){
+                    bigImg[j].style.opacity = 0;
+                }
+                bigImg[i].style.opacity = 1;
+            })
+        }
     </script>
 </body>
 </html>

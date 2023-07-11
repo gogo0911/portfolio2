@@ -76,3 +76,91 @@
         }
     }
 }
+@media screen and (max-width:768px) {
+    .footer{
+        padding: 0;
+        background-color: #151515;
+        display: flex;
+        justify-content: center;
+        .center{
+            position: relative;
+            width: 95%;
+            display: flex;
+            flex-direction: column-reverse;
+            .footLogo{
+                bottom: 150px;
+                right: 0;
+                width: 100px;
+                position: absolute;
+                margin-right: 5%;
+                >a{
+                    >img{
+                        
+                    }
+                }
+            }
+            .infoWrap{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                .sub{
+                    color: #999;
+                    margin-bottom: 100px;
+                    h3{
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        line-height: 18px;
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                }
+                .wrap{
+                    .sns{
+                        display: flex;
+                        margin-bottom: 20px;
+                        li{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 40px;
+                            background-color: #ffc600;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0 10px;
+                            >i{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    >p{
+                        color: #999;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .footGnbWrap{
+                display: flex;
+                padding: 20px 0;
+                .footGnb{
+                    margin-right: 10px;
+                    >li{
+                        margin-bottom: 10px;
+                        font-size: 1.5rem;
+                        >a{
+                            color: #999;
+                            transition: all .5s;
+                        }
+                        &:hover{
+                            >a{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

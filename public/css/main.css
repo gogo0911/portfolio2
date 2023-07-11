@@ -207,6 +207,85 @@ body {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 0;
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+  }
+  .footer .center {
+    position: relative;
+    width: 95%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer .center .footLogo {
+    bottom: 150px;
+    right: 0;
+    width: 100px;
+    position: absolute;
+    margin-right: 5%;
+  }
+  .footer .center .infoWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .center .infoWrap .sub {
+    color: #999;
+    margin-bottom: 100px;
+  }
+  .footer .center .infoWrap .sub h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .footer .center .infoWrap .sub p {
+    line-height: 18px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .footer .center .infoWrap .wrap .sns {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .footer .center .infoWrap .wrap .sns li {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #ffc600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+  .footer .center .infoWrap .wrap .sns li > i {
+    font-size: 20px;
+  }
+  .footer .center .infoWrap .wrap > p {
+    color: #999;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .footer .center .footGnbWrap {
+    display: flex;
+    padding: 20px 0;
+  }
+  .footer .center .footGnbWrap .footGnb {
+    margin-right: 10px;
+  }
+  .footer .center .footGnbWrap .footGnb > li {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  .footer .center .footGnbWrap .footGnb > li > a {
+    color: #999;
+    transition: all 0.5s;
+  }
+  .footer .center .footGnbWrap .footGnb > li:hover > a {
+    color: #fff;
+  }
+}
 .container .cont1 {
   display: flex;
   justify-content: center;
