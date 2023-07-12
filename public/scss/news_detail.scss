@@ -1,0 +1,27 @@
+@import "reset";
+@import "header";
+@import "footer";
+.cont1{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    .left_box{
+        width: 50%;
+        height: 100%;
+        position: relative;
+        >img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .bg_color{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #00000067;
+        }
+    }
+    .right_box{
+        width: 50%;
+    }
+}
