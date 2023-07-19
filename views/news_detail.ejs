@@ -5,8 +5,21 @@
             <div class="bg_color">
                 
             </div>
+            <h2>WORK&PRESS</h2>
+            <div class="textWrap">
+                <div class="dateWrap">
+                    <span class="press">PRESS</span>
+                    <span class="date"><%- newsResult.date %></span>
+                </div>
+                <h2 class="title"><%- newsResult.title %></h2>
+            </div>
+            
         </div>
         <div class="right_box">
+            <div class="dateWrap">
+                <span class="press">PRESS</span>
+                <span class="date"><%- newsResult.date %></span>
+            </div>
             <h2 class="title"><%- newsResult.title %></h2>
             <div class="prdImg">
                 <img src="/upload2/<%- newsResult.attachfile[0] %>">
@@ -22,10 +35,10 @@
                         <% } %> -->
                     </div>
                 </div>
-                <h3 class="subTitle"><%- newsResult.title %></h3>
                 <p class="newsDetail"><%- newsResult.newsDetail %></p>
             </div>
         </div>
     </div>
+    <%- include("footer") %>
 </body>
 </html>

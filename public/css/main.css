@@ -286,6 +286,10 @@ body {
     color: #fff;
   }
 }
+body {
+  transition: all 0.5s;
+}
+
 .container .cont1 {
   display: flex;
   justify-content: center;
@@ -750,6 +754,13 @@ body {
   border-radius: 30px;
   color: #000;
 }
+.container .cont5 .center .titleWrap.on .title {
+  color: #fff;
+}
+.container .cont5 .center .titleWrap.on a {
+  color: #fff;
+  border: 1px solid #fff;
+}
 .container .cont5 .center .swiper .swiper-slide {
   background-position: center center;
   display: flex;
@@ -763,7 +774,7 @@ body {
   position: relative;
 }
 .container .cont5 .center .swiper .slidebg .txt {
-  padding: 10px 10px;
+  padding: 20px;
   color: #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -914,8 +925,12 @@ body {
   content: "";
 }
 .container .cont6 {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.5s;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .container .cont6 .center {
   position: relative;

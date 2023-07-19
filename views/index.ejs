@@ -383,6 +383,7 @@
         const cont2 = document.querySelector(".cont2");
         const cont4 = document.querySelector(".cont4");
         const cont5 = document.querySelector(".cont5");
+        const cont6 = document.querySelector(".cont6");
         const listTitle = document.querySelectorAll(".textWrap .title")
         const flowBrand = document.querySelector(".flowBrand");
         const blindWrap = document.querySelector(".blindBgWrap");
@@ -421,37 +422,45 @@
                         setTimeout(()=>{
                             subMore.style.opacity = 1;
                         },500)   
-                    },1000)
+                    },500)
 
-                },1000)
+                },500)
                 
                 
             }
-            if(scTop > flowBrand.offsetTop){
+            if(scTop >= flowBrand.offsetTop){
                 hamColorWh()
             }
-            if(scTop > cont4.offsetTop - 300){
+            if(scTop >= cont4.offsetTop - 300){
                 for(let i=0; i<listTitle.length; i++){
                     listTitle[i].style.transform = 'translateY(0%)'
                     listTitle[i].style.height = '36px'
                 }
                 hamColorB()
             }
+            if(scTop >= cont5.offsetTop - 100){
+                document.querySelector("body").style.backgroundColor = "#000";
+                cont5.querySelector(".titleWrap").classList.add("on");
+                hamColorWh();
+            }
+            else{
+                document.querySelector("body").style.backgroundColor = "#fff";
+                cont5.querySelector(".titleWrap").classList.remove("on");
+                hamColorB();
+            }
+            if(scTop >= cont6.offsetTop - 500){
+                document.querySelector("body").style.backgroundColor = "#fff";
+                cont6.style.transform = "translateY(0%)"
+                cont6.style.opacity = 1
+                hamColorB();
+            }
+            else{
+                cont6.style.transform = "translateY(30%)"
+                cont6.style.opacity = 0
+                hamColorWh();
+            }
         });
-        // 햄버거메뉴 흰색 함수
-        function hamColorWh(){
-            for(let i=0; i< hamBtnSpan.length; i++){
-                    hamBtnSpan[i].style.backgroundColor = '#fff'
-                }
-                hamBtn.style.color = '#fff'
-        };
-        // 햄버거메뉴 검은색 함수
-        function hamColorB(){
-            for(let i=0; i< hamBtnSpan.length; i++){
-                    hamBtnSpan[i].style.backgroundColor = '#000'
-                }
-                hamBtn.style.color = '#000'
-        };
+        
 
         //롤링 배너 복제본 생성
         let roller = document.querySelector('.brands1');
