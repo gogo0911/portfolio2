@@ -24,19 +24,26 @@
             <div class="prdImg">
                 <img src="/upload2/<%- newsResult.attachfile[0] %>">
             </div>
-            <div class="detail">
-                <div class="titleWrap">
-                    <div class="linkWrap">
-                        <!-- <% if(login) { %>
-                            <% if(login.userNo === 0){ %>
-                                <a href="/store/update/<%- newsResult.num %>">수정</a>
-                                <a href="/dbdelete/<%- newsResult.num %>">삭제</a>
-                            <% } %>
-                        <% } %> -->
-                    </div>
-                </div>
-                <p class="newsDetail"><%- newsResult.newsDetail %></p>
-            </div>
+            <p class="newsDetail"><%- newsResult.newsDetail %></p>
+        </div>
+    </div>
+    <div class="btns">
+        <div class="prev">
+            <%if(newsResult.num === 1){%>
+                <a href="/news/detail/1"><i class="fa-solid fa-angles-left"></i>PREV</a>
+            <%}else{%>
+                <a href="/news/detail/<%- newsResult.num - 1 %>"><i class="fa-solid fa-angles-left"></i>PREV</a>
+            <%}%>
+        </div>
+        <div class="list">
+            <a href="">LIST<i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="next">
+            <%console.log(newsResult.num); if(newsResult.num === 6){%>
+                <a href="/news/detail/6">NEXT<i class="fa-solid fa-angles-right"></i></a>
+            <%}else{%>
+                <a href="/news/detail/<%- newsResult.num + 1 %>">NEXT<i class="fa-solid fa-angles-right"></i></a>
+            <%}%>
         </div>
     </div>
     <%- include("footer") %>
